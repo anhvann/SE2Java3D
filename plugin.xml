@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension 
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:dk.dtu.compute.se2.groupc?after=additions">
+         <command
+               commandId="groupc.java3D.startvis">
+            <visibleWhen>
+               <with
+                     variable="selection">
+                  <count value="1"/>
+                  <iterate>
+                     <adapt
+                           type="dk.dtu.compute.se2.groupc.geometry.GeoObject">
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="groupc.java3D.startvis"
+            description="Start 3D Visualisation from line"
+            defaultHandler="dk.dtu.compute.se2.groupc.handler.StartAnimationHandler"
+            name="Start 3D Vis from Line">
+      </command>
+   </extension>
+
+</plugin>

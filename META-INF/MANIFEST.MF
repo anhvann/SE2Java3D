@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Java3d
+Bundle-SymbolicName: dk.dtu.compute.se2.groupc.java3d;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.12.0",
+ java3d;bundle-version="1.5.1",
+ org.eclipse.core.commands,
+ org.eclipse.ui.workbench,
+ org.eclipse.jface,
+ org.eclipse.core.expressions,
+ dk.dtu.compute.se2.groupc;bundle-version="0.1.0"
+Import-Package: dk.dtu.compute.se2.groupc.geometry,
+ org.eclipse.draw2d.geometry,
+ org.pnml.tools.epnk.pnmlcoremodel
